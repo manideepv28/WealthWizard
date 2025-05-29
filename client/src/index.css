@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F8FAFC */
+  --foreground: 215 25% 27%; /* #334155 */
+  --muted: 210 11% 96%; /* #F1F5F9 */
+  --muted-foreground: 215 16% 47%; /* #64748B */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 215 25% 27%; /* #334155 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 215 25% 27%; /* #334155 */
+  --border: 214 13% 91%; /* #E2E8F0 */
+  --input: 214 13% 91%; /* #E2E8F0 */
+  --primary: 221 83% 53%; /* #1E40AF */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 210 11% 96%; /* #F1F5F9 */
+  --secondary-foreground: 215 25% 27%; /* #334155 */
+  --accent: 210 11% 96%; /* #F1F5F9 */
+  --accent-foreground: 215 25% 27%; /* #334155 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 60 9% 98%; /* #FEFEFE */
+  --ring: 221 83% 53%; /* #1E40AF */
+  --radius: 0.5rem;
+  
+  /* Custom financial colors */
+  --success: 142 71% 45%; /* #10B981 */
+  --success-foreground: 60 9% 98%; /* #FEFEFE */
+  --warning: 38 92% 50%; /* #F59E0B */
+  --warning-foreground: 60 9% 98%; /* #FEFEFE */
+  --danger: 0 84% 60%; /* #EF4444 */
+  --danger-foreground: 60 9% 98%; /* #FEFEFE */
+}
+
+.dark {
+  --background: 222 84% 5%; /* #0F172A */
+  --foreground: 210 40% 98%; /* #F8FAFC */
+  --muted: 217 33% 17%; /* #1E293B */
+  --muted-foreground: 215 20% 65%; /* #94A3B8 */
+  --popover: 222 84% 5%; /* #0F172A */
+  --popover-foreground: 210 40% 98%; /* #F8FAFC */
+  --card: 222 84% 5%; /* #0F172A */
+  --card-foreground: 210 40% 98%; /* #F8FAFC */
+  --border: 217 33% 17%; /* #1E293B */
+  --input: 217 33% 17%; /* #1E293B */
+  --primary: 221 83% 53%; /* #1E40AF */
+  --primary-foreground: 210 40% 98%; /* #F8FAFC */
+  --secondary: 217 33% 17%; /* #1E293B */
+  --secondary-foreground: 210 40% 98%; /* #F8FAFC */
+  --accent: 217 33% 17%; /* #1E293B */
+  --accent-foreground: 210 40% 98%; /* #F8FAFC */
+  --destructive: 0 63% 31%; /* #991B1B */
+  --destructive-foreground: 210 40% 98%; /* #F8FAFC */
+  --ring: 221 83% 53%; /* #1E40AF */
+  
+  /* Custom financial colors for dark mode */
+  --success: 142 76% 36%; /* #059669 */
+  --success-foreground: 210 40% 98%; /* #F8FAFC */
+  --warning: 32 95% 44%; /* #D97706 */
+  --warning-foreground: 210 40% 98%; /* #F8FAFC */
+  --danger: 0 63% 31%; /* #991B1B */
+  --danger-foreground: 210 40% 98%; /* #F8FAFC */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .text-warning {
+    color: hsl(var(--warning));
+  }
+  
+  .text-danger {
+    color: hsl(var(--danger));
+  }
+  
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .bg-warning {
+    background-color: hsl(var(--warning));
+  }
+  
+  .bg-danger {
+    background-color: hsl(var(--danger));
+  }
+  
+  .border-success {
+    border-color: hsl(var(--success));
+  }
+  
+  .border-warning {
+    border-color: hsl(var(--warning));
+  }
+  
+  .border-danger {
+    border-color: hsl(var(--danger));
+  }
+}
